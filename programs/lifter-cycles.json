@@ -1,0 +1,48 @@
+{
+  "cycles" : [
+    {
+      "id" : 1,
+      "bs5RMBeg" : 0,
+      "sessions" : [
+        {
+          "id" : 1,
+          "exercises" : [
+            {
+              "id" : 1,
+              "name" : "back-squat",
+              "sets" : 5,
+              "reps" : 5,
+              "weightBase" : "prev5RM",
+              "multiplier" : 0.9,
+              "increment" : 0,
+              "weightWorking" : "Prev5RM * 0.9",
+              "update5RM" : false
+            },
+            {
+              "id" : 2,
+              "name" : "bench-press",
+              "sets" : 5,
+              "reps" : 5,
+              "weightBase" : "prev5RM",
+              "multiplier" : 0.9,
+              "increment" : 0,
+              "weightWorking" : "Prev5RM * 0.9",
+              "update5RM" : false
+            },
+            {
+              "id" : 3,
+              "name" : "deadlift",
+              "sets" : 1,
+              "reps" : 5,
+              "weightBase" : "prev5RM",
+              "multiplier" : 0,
+              "increment" : "dlIncrement",
+              "weightWorking" : "Prev5RM * 0.9",
+              "update5RM" : true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

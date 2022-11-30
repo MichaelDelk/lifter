@@ -1,0 +1,17 @@
+{
+  "name": "lifter",
+  "version": "1.0.0",
+  "description": "Texas Intermediate Lifting Program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weightlifting",
+    "fitness",
+    "texas",
+    "rippetoe"
+  ],
+  "author": "delkmt",
+  "license": "ISC"
+}

@@ -1,0 +1,192 @@
+[
+  {
+    "id" : 1,
+    "name" : "back-squat",
+    "desc": "Back Squat",
+    "sessionConfigs" : [
+      {
+        "type" : "volume",
+        "workingSets" : 5,
+        "multiplier" : 0.9
+      },
+      {
+        "type" : "recovery",
+        "workingSets" : 2,
+        "multiplier" : 0.8
+      },
+      {
+        "type" : "intensity",
+        "workingSets" : 1,
+        "increment" : 5
+      }
+    ],
+    "warmups" : [
+      {
+        "sets" : 2,
+        "reps" : 5,
+        "multiplier" : 0
+      },
+      {
+        "sets" : 1,
+        "reps" : 5,
+        "multiplier" : 0.4
+      },
+      {
+        "sets" : 1,
+        "reps" : 3,
+        "multiplier" : 0.6
+      },
+      {
+        "sets" : 1,
+        "reps" : 2,
+        "multiplier" : 0.8
+      }
+    ]
+  },
+  {
+    "id" : 2,
+    "name" : "bench-press",
+    "desc": "Bench Press",
+    "sessionConfigs" : [
+      {
+        "type" : "volume",
+        "workingSets" : 5,
+        "multiplier" : 0.9
+      },
+      {
+        "type" : "recovery",
+        "workingSets" : 3,
+        "multiplier" : 0.9
+      },
+      {
+        "type" : "intensity",
+        "workingSets" : 1,
+        "increment" : 5
+      }
+    ],
+    "warmups" : [
+      {
+        "sets" : 2,
+        "reps" : 5,
+        "multiplier" : 0
+      },
+      {
+        "sets" : 1,
+        "reps" : 5,
+        "multiplier" : 0.5
+      },
+      {
+        "sets" : 1,
+        "reps" : 3,
+        "multiplier" : 0.7
+      },
+      {
+        "sets" : 1,
+        "reps" : 2,
+        "multiplier" : 0.9
+      }
+    ]
+  },
+  {
+    "id" : 3,
+    "name" : "deadlift",
+    "desc": "Deadlift",
+    "sessionConfigs" : [
+      {
+        "type" : "intensity",
+        "workingSets" : 1,
+        "increment" : 5
+      }
+    ],
+    "warmups" : [
+      {
+        "sets" : 2,
+        "reps" : 5,
+        "multiplier" : 0.4
+      },
+      {
+        "sets" : 1,
+        "reps" : 3,
+        "multiplier" : 0.6
+      },
+      {
+        "sets" : 1,
+        "reps" : 2,
+        "multiplier" : 0.85
+      }
+    ]
+  },
+  {
+    "id" : 4,
+    "name" : "overhead-press",
+    "desc": "Overhead Press",
+    "sessionConfigs" : [
+      {
+        "type" : "volume",
+        "workingSets" : 5,
+        "multiplier" : 0.9
+      },
+      {
+        "type" : "recovery",
+        "workingSets" : 3,
+        "multiplier" : 0.9
+      },
+      {
+        "type" : "intensity",
+        "workingSets" : 1,
+        "increment" : 5
+      }
+    ],
+    "warmups" : [
+      {
+        "sets" : 2,
+        "reps" : 5,
+        "multiplier" : 0
+      },
+      {
+        "sets" : 1,
+        "reps" : 5,
+        "multiplier" : 0.55
+      },
+      {
+        "sets" : 1,
+        "reps" : 3,
+        "multiplier" : 0.7
+      },
+      {
+        "sets" : 1,
+        "reps" : 2,
+        "multiplier" : 0.85
+      }
+    ]
+  },
+  {
+    "id" : 5,
+    "name" : "barbell-row",
+    "desc": "Barbell Row",
+    "sessionConfigs" : [
+      {
+        "type" : "intensity",
+        "workingSets" : 5,
+        "increment" : 5
+      }
+    ],
+    "warmups" : [
+      {
+        "sets" : 2,
+        "reps" : 5,
+        "multiplier" : 0.4
+      },
+      {
+        "sets" : 1,
+        "reps" : 3,
+        "multiplier" : 0.7
+      },
+      {
+        "sets" : 1,
+        "reps" : 2,
+        "multiplier" : 0.9
+      }
+    ]
+  }
+]
