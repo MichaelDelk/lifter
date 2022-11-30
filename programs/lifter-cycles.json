@@ -2,7 +2,13 @@
   "cycles" : [
     {
       "id" : 1,
-      "bs5RMBeg" : 0,
+      "bs5RMBeg" : {
+        "backSquat" : 225,
+        "benchPress" : 175,
+        "deadlift" : 315,
+        "overheadPress" : 115,
+        "barbellRow" : 135
+      }
       "sessions" : [
         {
           "id" : 1,

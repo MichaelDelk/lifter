@@ -1,4 +1,6 @@
 fs = require('fs');
+Cycle = require('./classes/Cycle.js');
+Session = require('./classes/Session.js');
 
 const equipment = {
     metric: false,
@@ -42,45 +44,18 @@ const beg5RMs = {
     "barbellRow" : 135
 }
 
+cycles = [];
+cyclesToGenerate = 3;
 
-/**
- * Create cycles.
- * Create cycle.
- * Create session 1.
- * Create session 2.
- * Create session 3.
- * Create session 4.
- * Create session 5.
- * Create session 6.
- */
+for (let cycleId = 1; cycleId <= cyclesToGenerate; cycleId++) {
+    const cycle = new Cycle(cycleId, beg5RMs);
 
-/**
- * Create cycle.
- */
-const cycle = {
-    "id" : 1,
-    "beg5RMs" : beg5RMs,
-    "sessions" : []
+    for (let sessionId = 1; sessionId <= 6; sessionId++) {
+        const session = new Session(sessionId);
+        cycle.addSession(session);
+    }
+    
+    cycles.push(cycle);
 }
 
-/**
- * Create session 1.
- */
-const session = {
-    "id" : 1,
-    "exercises" : []
-}
-
-/**
- * Add exercise to cycle.
- */
-session.exercises.push(backSquat);
-
-/**
- * Add session to cycle.
- */
-cycle.sessions.push(session);
-
-console.info(backSquat);
-console.info(cycle);
-console.info(cycle.sessions[0]);
+console.info(cycles);
