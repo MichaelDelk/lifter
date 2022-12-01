@@ -2,7 +2,7 @@
   "cycles" : [
     {
       "id" : 1,
-      "bs5RMBeg" : {
+      "beg5RMs" : {
         "backSquat" : 225,
         "benchPress" : 175,
         "deadlift" : 315,
