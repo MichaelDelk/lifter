@@ -7,16 +7,19 @@
       {
         "type" : "volume",
         "workingSets" : 5,
+        "workingReps" : 5,
         "multiplier" : 0.9
       },
       {
         "type" : "recovery",
         "workingSets" : 2,
+        "workingReps" : 5,
         "multiplier" : 0.8
       },
       {
         "type" : "intensity",
         "workingSets" : 1,
+        "workingReps" : 5,
         "increment" : 5
       }
     ],
@@ -51,16 +54,19 @@
       {
         "type" : "volume",
         "workingSets" : 5,
+        "workingReps" : 5,
         "multiplier" : 0.9
       },
       {
         "type" : "recovery",
         "workingSets" : 3,
+        "workingReps" : 5,
         "multiplier" : 0.9
       },
       {
         "type" : "intensity",
         "workingSets" : 1,
+        "workingReps" : 5,
         "increment" : 5
       }
     ],
@@ -102,16 +108,19 @@
       {
         "sets" : 2,
         "reps" : 5,
+        "workingReps" : 5,
         "multiplier" : 0.4
       },
       {
         "sets" : 1,
         "reps" : 3,
+        "workingReps" : 5,
         "multiplier" : 0.6
       },
       {
         "sets" : 1,
         "reps" : 2,
+        "workingReps" : 5,
         "multiplier" : 0.85
       }
     ]
@@ -124,16 +133,19 @@
       {
         "type" : "volume",
         "workingSets" : 5,
+        "workingReps" : 5,
         "multiplier" : 0.9
       },
       {
         "type" : "recovery",
         "workingSets" : 3,
+        "workingReps" : 5,
         "multiplier" : 0.9
       },
       {
         "type" : "intensity",
         "workingSets" : 1,
+        "workingReps" : 5,
         "increment" : 5
       }
     ],
@@ -168,6 +180,7 @@
       {
         "type" : "intensity",
         "workingSets" : 5,
+        "workingReps" : 5,
         "increment" : 5
       }
     ],
