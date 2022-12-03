@@ -57,12 +57,13 @@ const beg5RMs = {
     "overheadPress" : 115,
     "barbellRow" : 135
 }
+const cur5RMs = { ...beg5RMs };
 
 cycles = [];
 cyclesToGenerate = 1;
 
 for (let cycleId = 1; cycleId <= cyclesToGenerate; cycleId++) {
-    const cycle = new Cycle(cycleId, beg5RMs);
+    const cycle = new Cycle(cycleId, cur5RMs);
 
     /**
      * 1 cycle = 6 sessions (Typically 2 weeks, e.g. Mon-Wed-Fri, Mon-Wed-Fri)
@@ -79,46 +80,47 @@ for (let cycleId = 1; cycleId <= cyclesToGenerate; cycleId++) {
 
     let sessionId = 1;
     let session = new Session(sessionId);
-    session.addExercise(1, backSquatDefn, "volume", beg5RMs.backSquat);
-    session.addExercise(2, benchPressDefn, "volume", beg5RMs.benchPress);
-    session.addExercise(3, deadliftDefn, "intensity", beg5RMs.deadlift);
+    session.addExercise(1, backSquatDefn, "volume", cur5RMs.backSquat);
+    session.addExercise(2, benchPressDefn, "volume", cur5RMs.benchPress);
+    session.addExercise(3, deadliftDefn, "intensity", cur5RMs.deadlift);
     cycle.addSession(session);
     
     sessionId = 2;
     session = new Session(sessionId);
-    session.addExercise(1, backSquatDefn, "recovery", beg5RMs.backSquat);
+    session.addExercise(1, backSquatDefn, "recovery", cur5RMs.backSquat);
     session.addExercise(
-        2, overheadPressDefn, "recovery", beg5RMs.overheadPress
+        2, overheadPressDefn, "recovery", cur5RMs.overheadPress
     );
     cycle.addSession(session);
     
     sessionId = 3;
     session = new Session(sessionId);
-    session.addExercise(1, backSquatDefn, "intensity", beg5RMs.backSquat);
-    session.addExercise(2, benchPressDefn, "intensity", beg5RMs.benchPress);
-    session.addExercise(3, barbellRowDefn, "intensity", beg5RMs.barbellRow);
+    session.addExercise(1, backSquatDefn, "intensity", cur5RMs.backSquat);
+    session.addExercise(2, benchPressDefn, "intensity", cur5RMs.benchPress);
+    session.addExercise(3, barbellRowDefn, "intensity", cur5RMs.barbellRow);
     cycle.addSession(session);
     
     sessionId = 4;
     session = new Session(sessionId);
-    session.addExercise(1, backSquatDefn, "volume", beg5RMs.backSquat);
-    session.addExercise(2, overheadPressDefn, "volume", beg5RMs.overheadPress);
-    session.addExercise(3, deadliftDefn, "intensity", beg5RMs.deadlift);
+    session.addExercise(1, backSquatDefn, "volume", cur5RMs.backSquat);
+    session.addExercise(2, overheadPressDefn, "volume", cur5RMs.overheadPress);
+    session.addExercise(3, deadliftDefn, "intensity", cur5RMs.deadlift);
     cycle.addSession(session);
     
     sessionId = 5;
     session = new Session(sessionId);
-    session.addExercise(1, backSquatDefn, "recovery", beg5RMs.backSquat);
-    session.addExercise(2, benchPressDefn, "recovery", beg5RMs.benchPress);
+    session.addExercise(1, backSquatDefn, "recovery", cur5RMs.backSquat);
+    session.addExercise(2, benchPressDefn, "recovery", cur5RMs.benchPress);
     cycle.addSession(session);
     
     sessionId = 6;
     session = new Session(sessionId);
-    session.addExercise(1, backSquatDefn, "intensity", beg5RMs.backSquat);
+    session.addExercise(1, backSquatDefn, "intensity", cur5RMs.backSquat);
     session.addExercise(
-        2, overheadPressDefn, "intensity", beg5RMs.overheadPress
+        2, overheadPressDefn, "intensity", cur5RMs.overheadPress
     );
-    session.addExercise(3, barbellRowDefn, "intensity", beg5RMs.barbellRow);
+    session.addExercise(3, barbellRowDefn, "intensity", cur5RMs.barbellRow);
+
     cycle.addSession(session);
     
     cycles.push(cycle);
@@ -126,8 +128,17 @@ for (let cycleId = 1; cycleId <= cyclesToGenerate; cycleId++) {
 }
 
 cycles.forEach(cycle => {
-    console.info(cycle);
+    console.info("");
+    console.info("Cycle " + cycle.id);
     cycle.sessions.forEach(session => {
-        console.info(session);
-    })
+        console.info("");
+        console.info("Session " + session.id);
+        session.exercises.forEach(exercise => {
+            let output = exercise.desc;
+            output += " " + exercise.workingSets;
+            output += "x" + exercise.workingReps;
+            output += "x" + exercise.workingWeight;
+            console.info(output);
+        });
+    });
 });

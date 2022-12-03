@@ -101,6 +101,7 @@
       {
         "type" : "intensity",
         "workingSets" : 1,
+        "workingReps" : 5,
         "increment" : 5
       }
     ],

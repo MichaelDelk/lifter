@@ -6,25 +6,10 @@ class Session {
         this.id = sessionId;
     }
 
-    addExercise(exerciseId, exerciseDefn, sessionType, beg5RM) {
-        const config = exerciseDefn.sessionConfigs.find(
-            (config) => config.type === sessionType);
-            console.info(config);
-
-        const exercise = {} ;
-
-        exercise.id = exerciseId;
-        exercise.name = exerciseDefn.name;
-        exercise.desc = exerciseDefn.desc;
-        exercise.workingSets = config.workingSets;
-        exercise.workingReps = config.workingReps;
-
-        if (config.multiplier) {
-            exercise.workingWeight = beg5RM * config.multiplier;
-        } else {
-            exercise.workingWeight = beg5RM + config.increment;
-        }
-
+    addExercise(exerciseId, exerciseDefn, sessionType, cur5RM) {
+        const exercise = new Exercise(
+            exerciseId, exerciseDefn, sessionType, cur5RM
+        );
         this.exercises.push(exercise);
     }
 
