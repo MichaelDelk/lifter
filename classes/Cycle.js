@@ -147,7 +147,7 @@ class Cycle {
                 this.cur5RMs.overheadPress += config.increment;
                 break;
             case 'barbell-row':
-                this.cur5RMs.batbellRow += config.increment;
+                this.cur5RMs.barbellRow += config.increment;
                 break;
         }
     }

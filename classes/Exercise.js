@@ -26,12 +26,14 @@ class Exercise {
         } else {
             this.workingWeight = cur5RM + config.increment;
         }
+        this.workingWeight = Math.round(this.workingWeight);
 
         this.loadText = this.getPlateLoadText(this.workingWeight, equipment);
 
         this.warmups = exerciseDefn.warmups;
         exerciseDefn.warmups.forEach(warmup => {
             warmup.weight = this.workingWeight * warmup.multiplier;
+            warmup.weight = Math.round(warmup.weight);
             if (warmup.weight < equipment.barWeight) {
                 warmup.weight = equipment.barWeight;
             }
@@ -103,6 +105,18 @@ class Exercise {
             result += this.printWeightCountSubstring(weight_5, equipment.weights[4].toString());
         if (weight_2half != 0)
             result += this.printWeightCountSubstring(weight_2half, equipment.weights[5].toString());
+
+        let computedTotal = 0;
+        computedTotal += weight_45 * 45;
+        computedTotal += weight_35 * 35;
+        computedTotal += weight_25 * 25;
+        computedTotal += weight_10 * 10;
+        computedTotal += weight_5 * 5;
+        computedTotal += weight_2half * 2.5;
+        computedTotal *= 2;
+        computedTotal += equipment.barWeight;
+
+        result = computedTotal.toString() + ": " + result;
 
         return result.trim();
 

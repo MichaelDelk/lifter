@@ -77,4 +77,3 @@ cycles.forEach(cycle => {
         });
     });
 });
-
