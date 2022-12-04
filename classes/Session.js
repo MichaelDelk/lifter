@@ -6,9 +6,9 @@ class Session {
         this.id = sessionId;
     }
 
-    addExercise(exerciseId, exerciseDefn, sessionType, cur5RM) {
+    addExercise(exerciseId, exerciseDefn, sessionType, cur5RM, equipment) {
         const exercise = new Exercise(
-            exerciseId, exerciseDefn, sessionType, cur5RM
+            exerciseId, exerciseDefn, sessionType, cur5RM, equipment
         );
         this.exercises.push(exercise);
     }
