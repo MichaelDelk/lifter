@@ -18,9 +18,9 @@ Exercise = require('./classes/Exercise.js');
  * Equipment: Assume non-metric lbs.
  */
 const equipment = {
-    metric: false,
-    barWeight: 45,
-    weights: [45, 35, 25, 10, 5, 2.5]
+    "metric": false,
+    "barWeight": 45,
+    "weights": [45, 35, 25, 10, 5, 2.5]
 };
 
 /**
