@@ -137,7 +137,7 @@ class Cycle {
             case 'back-squat':
                 this.cur5RMs.backSquat += config.increment;
                 break;
-            case 'banch-press':
+            case 'bench-press':
                 this.cur5RMs.benchPress += config.increment;
                 break;
             case 'deadlift':
